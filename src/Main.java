@@ -38,9 +38,7 @@ public class Main {
                                 listOfPower.removeFirst();
                                 listOfDirection.removeFirst();
                                 count++;
-                                System.out.println("Up! "+count);
-                                System.out.println(listOfDirection);
-                                System.out.println(listOfPower);
+                                
                         }
                         else if((int)listOfDirection.getLast()==1){
                                 listOfPower.removeLast();
