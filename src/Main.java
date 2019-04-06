@@ -13,15 +13,40 @@ public class Main {
 
                 int[] tab2={1, 3, 1, 4, 2, 3, 5, 4};
                 System.out.println(solutionLinkedList(new int[] {4, 3, 2, 1, 5}, new int[] {0, 1, 0, 0, 0}));
-                //System.out.println(solutionStringCorecct("{[()()]}"));
-                //System.out.println(solutionMultiple(new int[] {-3, 1, 2, -2, 5, 6}));
-                //System.out.println(solutionDistinct(tab2));
-                // solutionOperations(5,new int[] {3, 4, 4, 6, 1, 4, 4});
-                //System.out.println(solutionFrog(5,tab2));
-                //System.out.println(frogJumps(10,85,30));
-                //solution3(tab2,3);
-                //System.out.println(solution(1041));
-                //System.out.println(solutionBrakJednejWtablicy(tab));
+                System.out.println(12345+5432);
+
+        }
+        /*public static int[] countNonDivisible2(int[] tab){
+                int[] tabTmp=tab;
+                Arrays.sort(tabTmp);
+                Map<Integer,Integer> map=new HashMap<>();
+                for(int i=0; i<tab.length;i++){
+                        int count=0;
+                        int jGlobal=0;
+                        for(int j=0;j<i;j++){
+                                if(tabTmp[i]%tabTmp[j]!=0){
+                                        count++;
+                                }
+                        }
+                }
+
+        }*/
+
+        public static int[] countNonDivisible(int[] tab){
+                int[] tabResult=new int[tab.length];
+                for(int i=0;i<tab.length;i++){
+                        int count=0;
+                        for(int j=0;j<tab.length;j++){
+                                if(i==j);
+                                else{
+                                        if(tab[i]%tab[j]!=0){
+                                                count++;
+                                        }
+                                }
+                        }
+                        tabResult[i]=count;
+                }
+                return tabResult;
         }
 
         public static int solutionLinkedList(int[] A, int[] B) {
@@ -38,7 +63,7 @@ public class Main {
                                 listOfPower.removeFirst();
                                 listOfDirection.removeFirst();
                                 count++;
-                                
+
                         }
                         else if((int)listOfDirection.getLast()==1){
                                 listOfPower.removeLast();
